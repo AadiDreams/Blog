@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %} Read {% endblock %}
+
+{% block content %}
+
+{% for post in posts %}
+    <div style="display: flex;align-items: center;flex-direction: column;width:100%;">
+        <div style="width:800px;">
+            <br>
+            <h2> {{ post.title }} </h2>
+            <p>By {{ post.author }} on {{ post.date_posted }}</p>
+            <p>{{ post.content[:300] }}<a href="{{ url_for('more', id=post.id) }}" style="text-decoration: none;">   read more...</a></p>
+            <a href="{{ url_for('edit_post', id=post.id) }}"><button value="edit" style="background-color: #808080;border: 1px solid #808080;height:30px;width:80px;border-radius: 10px;color:#fff">Edit</button></a>
+            <a href="{{ url_for('delete_post', id=post.id) }}"><button value="delete" style="background-color: #808080;border: 1px solid #808080;height:30px;width:80px;border-radius: 10px;color:#fff">Delete</button></a>
+        </div>
+    </div>
+{% endfor %}
+
+{% endblock %}

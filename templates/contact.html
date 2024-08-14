@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %} About {% endblock %}
+
+{% block nav %}
+        <ul class="nav nav-pills">
+          <li class="nav-item"><a href="/" class="nav-link" aria-current="page">Home</a></li>
+          <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="/contact" class="nav-link active">Contact</a></li>
+        </ul>
+{% endblock %}
+
+{% block content %}
+
+    <div style="display: flex;align-items: center;flex-direction: column;width:100%;">
+        <div style="width:800px;">
+        <br>
+        <h1>Contact Us</h1>
+        <p>We love hearing from our community. If you have any questions, suggestions, or just want to say hello, feel free to reach out to us at [your contact email]. Let's create something amazing together!</p>
+        <br>
+        <h2>Our Story</h2>
+        <p>StorySphere was founded with the vision of creating a platform that celebrates the art of storytelling. We believe that stories have the power to change the world by bridging gaps, fostering understanding, and sparking inspiration. Since our launch, we've grown into a thriving community of passionate writers and readers who share a common love for storytelling.</p>
+        <p>Thank you for being a part of StorySphere. Let's write the future, one story at a time.</p>
+        <br>
+        <h2>Join Us</h2>
+        <p>Whether you're an aspiring writer looking to share your work, a seasoned author seeking a new audience, or a reader in search of captivating stories, StorySphere welcomes you. Join our community today and be part of a movement that celebrates the power of words and the beauty of diverse voices.</p>
+        <br>
+        </div>
+    </div>
+
+{% endblock %}
